@@ -210,6 +210,7 @@ section#services {
     border-style: solid;
     border-color: #4efa7a;
     text-align: center;
+    align-items: center;
 }
 
 .box > .btn {
@@ -247,7 +248,7 @@ section#services .box > .row > .box {
     background-color: #2d2c38;
     flex-direction: column;
     max-width: 15vw;
-    height: 12em;
+    height: 15em;
     border-style: none;
 }
 
@@ -311,6 +312,10 @@ section#services .box > .row > .box {
 .btn-green:hover {
     background-color: #4efa7a;
     color: #fff;
+}
+
+.btn-no {
+    cursor: not-allowed;
 }
 
 /* Text Decoration
