@@ -1,0 +1,11 @@
+RewriteEngine on
+IndexIgnore *
+
+RewriteRule ^projects projects.html [NC]
+RewriteRule ^services services.html [NC]
+RewriteRule ^contacts contacts.html [NC]
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NE,L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ /$1.html [L]
