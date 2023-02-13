@@ -84,7 +84,7 @@ nav .nav-link.active:hover {
 }
 }
 
-/* TODO: Mobile Navigation */
+/* TODO: #2 Mobile Navigation */
 @media (max-width: 860px) {
     nav {
       display: none;
@@ -195,12 +195,6 @@ section#services {
     align-items: center;
 }
 
-section#services > .box {
-    padding: 2em 5em;
-    background-color: #27262e;
-    border-style: solid;
-    border-color: #4efa7a;
-}
 
 .box {
     display: inline-flex;
@@ -211,6 +205,15 @@ section#services > .box {
     border-radius: 16px;
     background-color: #2d2c38;
     flex-direction: column;
+    padding: 2em 3em;
+    background-color: #27262e;
+    border-style: solid;
+    border-color: #4efa7a;
+    text-align: center;
+}
+
+.box > .btn {
+    margin-top: 1em;
 }
 
 .box > img {
@@ -226,9 +229,11 @@ section#services > .box {
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 10px;
+    text-align: center;
+    color: #c0c0c0;
 }
 
-section#services .box > .row {
+.row {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +248,10 @@ section#services .box > .row > .box {
     flex-direction: column;
     max-width: 15vw;
     height: 12em;
+    border-style: none;
 }
+
+/* TODO: #1 Add mobile optimization to services box */
 
 .box > .info {
     display: flex;
@@ -282,6 +290,26 @@ section#services .box > .row > .box {
 
 .btn-primary:hover {
     background-color: #208fb6;
+    color: #fff;
+}
+
+.btn-blue {
+    background-color: #72cbf6;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #72cbf6;
+    color: #fff;
+}
+
+.btn-green {
+    background-color: #4efa7a;
+    color: #fff;
+}
+
+.btn-green:hover {
+    background-color: #4efa7a;
     color: #fff;
 }
 
@@ -362,6 +390,24 @@ section {
     padding: 2rem 0;
 }
 
+.ms-1 {
+    margin-left: 1rem;
+    margin-right: 1em;
+}
+
+.h-grow {
+    transition-duration: 200ms;
+}
+
+.h-grow:hover {
+    transform: scale(1.08);
+    transition-duration: 200ms;
+}
+
+.h-nogrow:hover {
+    transform: scale(1);
+}
+
 /* Brands
 -------------------------------------------------- */
 
@@ -387,4 +433,11 @@ section {
     font-size: 0.83rem;
     color:#fff;
     text-decoration: none;
+}
+
+/* Decoration
+-------------------------------------------------- */
+
+.c-pointer {
+    cursor: pointer;
 }
