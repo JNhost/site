@@ -15,6 +15,7 @@ body {
 
 @media(min-width: 860px) {
 
+/* TODO: #3 Fix navigation not sticky */
 nav {
     position: absolute;
     top: 0;
