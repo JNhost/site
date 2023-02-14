@@ -17,6 +17,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    @turnstileScripts()
 </head>
 
 <body>
@@ -135,21 +136,33 @@
             <div class="text-center">
                 <span>Contact</span>
                 <h1>How you can reach us</h1>
+                @if(session('success'))
+                <div class="alert alert-success">
+                  {{ session('success') }}
             </div>
+            @endif
             <div class="box ms-1">
-                <!--TODO: #4 Create contact form backend -->
-                <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ" method="post" class="d-flex flex-column">
+                <form action="" method="post" class="d-flex flex-column">
+                    @csrf
+                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" class="form-control" name="name" required>
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    </div>
 
+                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                    </div>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <!-- TODO: #5 Add captcha -->
-
+                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                    <label for="comment">Message:</label>
+                    <textarea name="comment" id="message" class="form-control" required></textarea>
+                    <span class="text-danger">{{ $errors->first('comment') }}</span>
+                    </div>
+                    
+                    <x-turnstile />
                     <button type="submit">Submit</button>
                 </form>
             </div>
