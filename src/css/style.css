@@ -217,6 +217,10 @@ section#services {
     align-items: center;
 }
 
+section#services .box {
+    width: 65vw;
+}
+
 
 .box {
     display: inline-flex;
@@ -236,7 +240,7 @@ section#services {
 }
 
 .box > .btn {
-    margin-top: 1em;
+    margin-top: 1.2em;
 }
 
 .box > img {
@@ -253,7 +257,6 @@ section#services {
     vertical-align: middle;
     margin-bottom: 10px;
     text-align: center;
-    color: #c0c0c0;
 }
 
 .row {
@@ -269,9 +272,10 @@ section#services .box > .row > .box {
     display: flex;
     background-color: #2d2c38;
     flex-direction: column;
-    max-width: 15vw;
+    max-width: 30%;
     height: 15em;
     border-style: none;
+    margin: 0 1em 2em 1em;
 }
 
 /* TODO: #1 Add mobile optimization to services box */
@@ -283,6 +287,10 @@ section#services .box > .row > .box {
     flex-direction: column;
     height: 100%;
     text-align: center;
+}
+
+.box > .text-center {
+    padding-bottom: 1em;
 }
 
 /* Team
