@@ -18,3 +18,4 @@ yarn-error.log
 /.vscode
 /.ignored
 _ide_helper.php
+/node_modules
