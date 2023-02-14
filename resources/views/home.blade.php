@@ -17,6 +17,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    @turnstileScripts()
 </head>
 
 <body>
@@ -141,7 +142,6 @@
             </div>
             @endif
             <div class="box ms-1">
-                <!--TODO: #4 Create contact form backend -->
                 <form action="" method="post" class="d-flex flex-column">
                     @csrf
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
@@ -161,9 +161,8 @@
                     <textarea name="comment" id="message" class="form-control" required></textarea>
                     <span class="text-danger">{{ $errors->first('comment') }}</span>
                     </div>
-
-                    <!-- TODO: #5 Add captcha -->
-
+                    
+                    <x-turnstile />
                     <button type="submit">Submit</button>
                 </form>
             </div>

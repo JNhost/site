@@ -10,7 +10,8 @@
         "illuminate/mail": "^9.51",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "ryangjchandler/laravel-cloudflare-turnstile": "^0.2.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
