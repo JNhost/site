@@ -15,9 +15,8 @@ body {
 
 @media(min-width: 860px) {
 
-/* TODO: #3 Fix navigation not sticky */
 nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -26,10 +25,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #2d2c387c;
+    background-color: #2d2c38a6;
     color: #fff;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
     height: 5em;
     padding: 0 15vw;
 }
