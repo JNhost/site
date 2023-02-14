@@ -457,6 +457,11 @@ section {
     transform: scale(1);
 }
 
+.d-center-h {
+    display: flex;
+    align-items: center;
+}
+
 /* Brands
 -------------------------------------------------- */
 
