@@ -115,7 +115,7 @@ nav .nav-link.active:hover {
 
 section#hero { 
     padding: 0 !important;
-    width: 100vw;
+    width: 100%;
 }
 #hero-bg {
     overflow: hidden;
