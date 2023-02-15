@@ -118,7 +118,7 @@
             <h1 class="text-center">Meet the team</h1>
             <div class="row">
                 <div class="box ms-1 h-grow c-pointer" style="background-color: #4efa7a25;">
-                    <img class="logo" src="./src/img/team/jodgg.png" alt="logo">
+                    <img class="logo" src="./src/img/team/joddy.png" alt="logo">
                     <h3>Joddy</h3>
                     <span class="info text-gray">JOD.GG</span>
                     <a href="https://me.jod.gg" class="btn btn-green h-nogrow">Visit Profile</a>
