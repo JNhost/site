@@ -134,7 +134,7 @@
 
         <section id="contact" class="d-flex flex-column d-center-h">
             <div class="text-center">
-                <span>Contact</span>
+                <h3 class="text-primary mp-none">Contact</h3>
                 <h1>How you can reach us</h1>
                 @if(session('success'))
                 <div class="alert alert-success">
@@ -146,17 +146,17 @@
                     @csrf
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" class="form-control" name="name" required>
+                    <input type="text" id="name" class="form-control" name="name" required placeholder="Please enter your name">
                     <span class="text-danger">{{ $errors->first('name') }}</span>
                     </div>
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="mail@example.com">
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     </div>
 
-                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}" id="fg-comment">
                     <label for="comment">Message:</label>
                     <textarea name="comment" id="message" class="form-control" required></textarea>
                     <span class="text-danger">{{ $errors->first('comment') }}</span>

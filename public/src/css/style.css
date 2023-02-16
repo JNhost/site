@@ -308,6 +308,49 @@ section#team img.logo {
     object-position: center;
 }
 
+/* Contact
+-------------------------------------------------- */
+
+section#contact label {
+    color: #c0c0c0;
+}
+
+section#contact .form-group {
+    margin-bottom: 1em;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contact #fg-comment {
+    align-items: flex-start;
+}
+
+section#contact #fg-comment :first-child {
+    padding-top: 8px;
+}
+
+section#contact .form-group > label {
+    margin-right: 0.5em;
+}
+
+section#contact input, section#contact textarea {
+    background-color: #565656;
+    border-radius: 16px;
+    padding: 1em 1em;
+    border-style: solid;
+    border-color: #c0c0c0;
+    border-width: 2px;
+    color: #c0c0c0;
+    resize: vertical;
+}
+
+
+::placeholder {
+    color: #fff;
+}
+
 
 /* Buttons
 -------------------------------------------------- */
@@ -460,6 +503,11 @@ section {
 .d-center-h {
     display: flex;
     align-items: center;
+}
+
+.mp-none {
+    margin: 0;
+    padding: 0;
 }
 
 /* Brands
