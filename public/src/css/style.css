@@ -224,18 +224,24 @@ section#services .box {
 .box {
     display: inline-flex;
     margin: 1em 0.5em;
-    padding: 2em;
     background-color: #fff;
     width: auto;
     border-radius: 16px;
-    background-color: #2d2c38;
     flex-direction: column;
-    padding: 2em 3em;
+    padding: 1em;
     background-color: #27262e;
     border-style: solid;
-    border-color: #4efa7a;
+    border-color: transparent;
     text-align: center;
     align-items: center;
+}
+
+.box-blue {
+    border-color: #208fb6;
+}
+
+.box-green {
+    border-color: #4efa7a;
 }
 
 .box > .btn {
@@ -271,10 +277,26 @@ section#services .box > .row > .box {
     display: flex;
     background-color: #2d2c38;
     flex-direction: column;
-    max-width: 30%;
+    max-width: 360px;
     height: 15em;
     border-style: none;
     margin: 0 1em 2em 1em;
+}
+
+@media only screen and (max-width: 852px) {
+    section#services .box > .row > .box {
+        display: flex;
+        background-color: #2d2c38;
+        flex-direction: column;
+        max-width: 80%;
+        height: 15em;
+        border-style: none;
+        margin: 0 1em 2em 1em;
+    }
+
+    section#services .box {
+        width: 80%;
+    }
 }
 
 /* TODO: #1 Add mobile optimization to services box */
@@ -295,6 +317,11 @@ section#services .box > .row > .box {
 /* Team
 -------------------------------------------------- */
 
+section#team .box {
+    width: auto;
+    padding: 2em 3em;
+}
+
 section#team img.logo {
     border-radius: 50%;
     background-color: #27262e;
@@ -311,8 +338,17 @@ section#team img.logo {
 /* Contact
 -------------------------------------------------- */
 
+section#contact .box {
+    padding: 2em;
+    min-width: 50%;
+}
+
 section#contact label {
     color: #c0c0c0;
+}
+
+section#contact .box form {
+    width: 100%;
 }
 
 section#contact .form-group {
@@ -331,24 +367,59 @@ section#contact #fg-comment :first-child {
     padding-top: 8px;
 }
 
+section#contact #fg-comment textarea {
+    min-height: 4em;
+    max-height: 10em;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+/* textarea custom scrollbar */
+section#contact #fg-comment textarea::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+section#contact #fg-comment textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+section#contact #fg-comment textarea::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
 section#contact .form-group > label {
     margin-right: 0.5em;
 }
 
-section#contact input, section#contact textarea {
+section#contact input, section#contact textarea, section#contact .form-control {
     background-color: #565656;
     border-radius: 16px;
     padding: 1em 1em;
     border-style: solid;
-    border-color: #c0c0c0;
     border-width: 2px;
-    color: #c0c0c0;
-    resize: vertical;
+    color: #ffffff;
+    border-color: transparent;
+    resize: none;
+    transition-duration: 200ms;
+    min-width: 25vw;
+}
+
+section#contact label {
+    width: 3rem;
+}
+
+/* set contact textarea and input border color on focus */
+section#contact input:focus, section#contact textarea:focus {
+    outline: none;
+    border-style: solid;
+    border-color: #a5a5a5;
+    transition-duration: 200ms;
 }
 
 
 ::placeholder {
-    color: #fff;
+    color: #c0c0c0;
 }
 
 
@@ -363,12 +434,14 @@ section#contact input, section#contact textarea {
     cursor: pointer;
     text-decoration: none;
     transition-duration: 100ms;
+    border-style: none;
 }
 
 .btn:hover {
     text-decoration: none;
     transform: scale(1.08);
     transition-duration: 200ms;
+    border-style: none;
 }
 
 .btn-primary {

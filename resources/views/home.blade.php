@@ -117,7 +117,7 @@
         <section id="team">
             <h1 class="text-center">Meet the team</h1>
             <div class="row">
-                <div class="box ms-1 h-grow c-pointer" style="background-color: #4efa7a25;">
+                <div class="box ms-1 h-grow c-pointer box-green" style="background-color: #4efa7a25;">
                     <img class="logo" src="./src/img/team/joddy.png" alt="logo">
                     <h3>Joddy</h3>
                     <span class="info text-gray">JOD.GG</span>
@@ -139,10 +139,11 @@
                 @if(session('success'))
                 <div class="alert alert-success">
                   {{ session('success') }}
+                </div>
+                @endif
             </div>
-            @endif
-            <div class="box ms-1">
-                <form action="" method="post" class="d-flex flex-column">
+            <div class="box ms-1 box-blue">
+                <form action="" method="post" class="d-flex flex-column flex-center" style="min-width: 25vw;">
                     @csrf
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="name">Name:</label>
@@ -157,13 +158,13 @@
                     </div>
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}" id="fg-comment">
-                    <label for="comment">Message:</label>
+                    <label for="comment">MSG:</label>
                     <textarea name="comment" id="message" class="form-control" required></textarea>
                     <span class="text-danger">{{ $errors->first('comment') }}</span>
                     </div>
                     
                     <x-turnstile />
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 40vw; max-width: 300px; padding: 0.8rem 0;">Submit</button>
                 </form>
             </div>
         </section>
