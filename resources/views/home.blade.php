@@ -45,6 +45,7 @@
         </section>
 
         <section id="about">
+            <!-- TODO: #7 Add a background image to the darker section (#27262e) -->
             <h1 class="text-center">We use&nbsp;<span class="text-primary">advanced</span>&nbsp;software and hardware.
             </h1>
             <div class="brands">
@@ -168,6 +169,10 @@
                 </form>
             </div>
         </section>
+
+        <footer>
+            <!-- TODO: #8 Footer -->
+        </footer>
     </main>
 </body>
 </html>
