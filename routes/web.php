@@ -20,5 +20,19 @@ use App\Http\Controllers\ContactFormController;
 });
 */
 
+// Home
 Route::get('/', [ContactFormController::class, 'contact'])->name('contact');
 Route::post('/', [ContactFormController:: class, 'contactPost'])->name('contactPost');
+
+/*
+//Projects 
+Route::get('/projects', function () {
+    return view('projects');
+}); 
+
+
+//Services
+Route::get('/services', function () {
+    return view ('services');
+});
+*/

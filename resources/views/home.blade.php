@@ -17,7 +17,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    @turnstileScripts()
+    {{ romanzipp\Turnstile\Captcha::getScript() }}
 </head>
 
 <body>
@@ -164,7 +164,7 @@
                     <span class="text-danger">{{ $errors->first('comment') }}</span>
                     </div>
                     
-                    <x-turnstile />
+                    {{ romanzipp\Turnstile\Captcha::getChallenge() }}
                     <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 40vw; max-width: 300px; padding: 0.8rem 0;">Submit</button>
                 </form>
             </div>
