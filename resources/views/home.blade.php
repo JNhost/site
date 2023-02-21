@@ -22,7 +22,7 @@
 
 <body>
     <nav>
-        <div class="nav-logo">
+        <div class="logo">
             <a href="/"><span><img src="./src/img/JN.png" alt="logo" class="icon"> JN Hosting</span></a>
         </div>
         <ul class="nav-links">
@@ -41,6 +41,9 @@
                 <h3 class="text-primary">JOD.GG & NotoHost.eu</h3>
                 <h1>Welcome to <strong>JN Hosting</strong></h1>
                 <img src="./src/img/JN.svg" draggable="false" alt="jnhost.net" height="350em" width="auto">
+                <noscript>
+            <span class="text-red" style="font-weight: 600; font-size: 1.2rem; background-color: rgb(0, 0, 0, 25%); padding: 9px; border-radius: 6px;">Please enable JavaScript on this site</span><br>
+        </noscript>
             </div>
         </section>
 
@@ -149,21 +152,23 @@
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="name">Name:</label>
                     <input type="text" id="name" class="form-control" name="name" required placeholder="Please enter your name">
-                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    <span class="text-red">{{ $errors->first('name') }}</span>
                     </div>
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" required placeholder="mail@example.com">
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                    <span class="text-red">{{ $errors->first('email') }}</span>
                     </div>
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}" id="fg-comment">
                     <label for="comment">MSG:</label>
                     <textarea name="comment" id="message" class="form-control" required></textarea>
-                    <span class="text-danger">{{ $errors->first('comment') }}</span>
+                    <span class="text-red">{{ $errors->first('comment') }}</span>
                     </div>
-                    
+                    <noscript>
+                        <span class="text-red">Please enable JavaScript to submit this form.</span>
+                    </noscript>
                     {{ romanzipp\Turnstile\Captcha::getChallenge() }}
                     <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 40vw; max-width: 300px; padding: 0.8rem 0;">Submit</button>
                 </form>
@@ -171,7 +176,13 @@
         </section>
 
         <footer>
-            <!-- TODO: #8 Footer -->
+            <div class="logo">
+                <a href="#" title="Go to top"><span><img src="./src/img/JN.png" alt="logo" class="icon"> JN Hosting</span></a>
+            </div>
+            <p>Yea, we're quite private.</p>
+            <div class="copyright">
+                <p>&copy; jnhost.net 2021 - <script>document.write(new Date().getFullYear());</script><noscript>&infin;</noscript> | All Rights Reserved</p>
+            </div>
         </footer>
     </main>
 </body>

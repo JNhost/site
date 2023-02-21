@@ -13,8 +13,6 @@ body {
 /* Navigation
 -------------------------------------------------- */
 
-@media(min-width: 860px) {
-
 nav {
     position: fixed;
     top: 0;
@@ -33,19 +31,19 @@ nav {
     padding: 0 15vw;
 }
 
-nav .nav-logo {
+.logo {
     font-size: 1.2rem;
     font-weight: bold;
     display: inline-block;
     vertical-align: middle;
 }
 
-nav .nav-logo span {
+.logo span {
     margin: 0;
     padding: 0;
 }
 
-nav .nav-logo .icon {
+.logo .icon {
     height: 20px;
     width: 20px;
     padding: 4px;
@@ -55,6 +53,10 @@ nav .nav-logo .icon {
     vertical-align: middle;
     margin-right: 5px;
 }
+
+
+@media(min-width: 860px) {
+
 
 nav .nav-links {
     display: flex;
@@ -423,6 +425,29 @@ section#contact input:focus, section#contact textarea:focus {
 }
 
 
+/* Footer
+-------------------------------------------------- */
+
+footer {
+    background-color: #27262e;
+    color: #c0c0c0;
+    padding: 1em;
+    text-align: center;
+}
+
+footer .logo {
+    margin: 8px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: normal;
+}
+
+footer .copyright {
+    margin-top: 0.5em;
+}
+
 /* Buttons
 -------------------------------------------------- */
 
@@ -505,6 +530,10 @@ a {
 
 .text-gray {
     color: #c0c0c0;
+}
+
+.text-red {
+    color: #ff4040;
 }
 
 h1, h2, h3, h4, h5, h6 {
