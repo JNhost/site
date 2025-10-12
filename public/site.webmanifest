@@ -1,0 +1,21 @@
+{
+  "name": "JN Hosting",
+  "short_name": "JN Hosting",
+  "description": "Advanced hosting solutions by JOD.GG & NotoHost.eu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
