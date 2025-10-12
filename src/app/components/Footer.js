@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="https://www.jnhost.net/assets/img/Untitled%20design.png?h=978967b43329c42b726f450436110c3d"
+                src="/img/logo.png"
                 alt="JN Hosting Logo"
                 className="w-10 h-10 rounded-xl"
               />
