@@ -2,6 +2,12 @@
 const nextConfig = {
     reactStrictMode: true,
     
+    // Generate unique build ID for cache busting
+    generateBuildId: async () => {
+        // Use timestamp-based build ID to ensure fresh caches on new deploys
+        return `build-${Date.now()}`;
+    },
+    
     // Explicit environment variables for standalone build
     env: {
         TURNSTILE_SECRET_KEY: process.env.TURNSTILE_SECRET_KEY,
@@ -9,6 +15,7 @@ const nextConfig = {
         EMAIL_PORT: process.env.EMAIL_PORT,
         EMAIL_USER: process.env.EMAIL_USER,
         EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
+        NEXT_PUBLIC_BUILD_ID: process.env.NEXT_PUBLIC_BUILD_ID || `build-${Date.now()}`,
     },
     
     images: {
@@ -26,7 +33,20 @@ const nextConfig = {
     async headers() {
         return [
             {
-                source: '/_next/static/(.*)',
+                source: '/_next/static/:path*',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=31536000, immutable',
+                    },
+                    {
+                        key: 'X-Content-Type-Options',
+                        value: 'nosniff',
+                    },
+                ],
+            },
+            {
+                source: '/static/:path*',
                 headers: [
                     {
                         key: 'Cache-Control',
@@ -35,11 +55,20 @@ const nextConfig = {
                 ],
             },
             {
+                source: '/:path*.{jpg,jpeg,png,gif,webp,avif,ico,svg}',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=86400, stale-while-revalidate=604800',
+                    },
+                ],
+            },
+            {
                 source: '/(.*)',
                 headers: [
                     {
                         key: 'Cache-Control',
-                        value: 'public, max-age=60, must-revalidate',
+                        value: 'public, max-age=0, must-revalidate',
                     },
                     {
                         key: 'X-DNS-Prefetch-Control',

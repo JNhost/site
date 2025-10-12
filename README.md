@@ -42,11 +42,13 @@ Open [http://localhost:3001](http://localhost:3001) to view the site.
 ## Available Scripts
 
 - `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production (includes standalone build)
+- `npm run build` - Build for production (auto-cleans, builds, generates build ID)
 - `npm run build:standalone` - Copy static assets for standalone deployment
 - `npm start` - Start Next.js production server
 - `npm run start:prod` - Start standalone production server on port 3001
-- `npm run clean` - Clean build artifacts
+- `npm run clean` - Clean .next and out directories
+- `npm run clean:cache` - Clean Next.js cache only
+- `npm run clean:all` - Clean all build artifacts and caches
 - `npm run lint` - Run ESLint with auto-fix
 
 ## Configuration
@@ -61,15 +63,25 @@ See [CONTACT_FORM_SETUP.md](./CONTACT_FORM_SETUP.md) for detailed instructions o
 
 ## Production Deployment
 
-The project is configured for standalone deployment:
+The project is configured for standalone deployment with automatic cache busting:
 
 ```bash
-# Build for production
+# Build for production (auto-cleans old caches)
 npm run build
 
 # Start standalone server
 npm run start:prod
 ```
+
+### Cache Busting Features
+- ✅ **Unique Build IDs** - Each build gets timestamp-based ID
+- ✅ **Automatic Cleanup** - Old caches cleared before build
+- ✅ **Build Info File** - `/build-info.json` for version tracking
+- ✅ **Client-Side Check** - Auto-detects new builds (every 3 min)
+- ✅ **Smart Caching** - Different strategies per asset type
+- ✅ **User Notifications** - Prompts to refresh on new deploy
+
+See [CACHE_BUSTING.md](./CACHE_BUSTING.md) for detailed information.
 
 The standalone build includes all necessary files in `.next/standalone/` for deployment.
 

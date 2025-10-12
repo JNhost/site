@@ -4,15 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm run clean && next build && npm run build:standalone",
+    "prebuild": "npm run clean:all",
+    "build": "next build && npm run build:standalone && npm run postbuild",
     "build:standalone": "cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
+    "postbuild": "node scripts/generate-build-id.js",
     "build:analyze": "ANALYZE=true npm run build",
     "start": "next start",
     "start:prod": "NEXT_DEPLOYMENT_TYPE=standalone PORT=3001 NODE_ENV=production node .next/standalone/server.js",
     "lint": "next lint --fix",
     "lint:check": "next lint",
     "clean": "rm -rf .next out",
-    "clean:cache": "rm -rf .next/cache"
+    "clean:cache": "rm -rf .next/cache",
+    "clean:all": "rm -rf .next out node_modules/.cache"
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.2",
