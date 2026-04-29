@@ -18,20 +18,20 @@
     "clean:all": "rm -rf .next out node_modules/.cache"
   },
   "dependencies": {
-    "@types/nodemailer": "^7.0.2",
-    "next": "^15.5.7",
-    "nodemailer": "^7.0.9",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "sanitize-html": "^2.17.0",
+    "next": "^16.2.4",
+    "nodemailer": "^8.0.7",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "sanitize-html": "^2.17.3",
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
   }
 }

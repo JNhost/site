@@ -111,6 +111,9 @@ const nextConfig = {
     compress: true,
     
     output: 'standalone',
+
+    // Explicitly opt into Turbopack config to avoid Next 16 build errors.
+    turbopack: {},
     
     webpack: (config, { dev, isServer }) => {
         // Production optimizations
