@@ -4,7 +4,7 @@ Modern Next.js website for JN Hosting with advanced animations, glassmorphism ef
 
 ## Features
 
-- ⚡ Next.js 16.2.4 with Turbopack
+- ⚡ Next.js 16.2.6 with Turbopack
 - 🎨 Tailwind CSS 4 with custom animations
 - 📱 Fully responsive mobile-first design
 - 🎭 Glassmorphism UI effects
@@ -18,7 +18,7 @@ Modern Next.js website for JN Hosting with advanced animations, glassmorphism ef
 
 ### Prerequisites
 
-- Node.js 20+ installed
+- Node.js 20.9+ installed
 - npm or yarn package manager
 - Cloudflare Turnstile account (for contact form)
 
@@ -108,7 +108,7 @@ See [SECURITY.md](./SECURITY.md) for detailed security information.
 
 ## 🎯 Performance Features
 
-- ⚡ Next.js 16.2.4 with Turbopack
+- ⚡ Next.js 16.2.6 with Turbopack
 - 🖼️ Automatic image optimization (WebP, AVIF)
 - 📦 Code splitting and lazy loading
 - 🗜️ Gzip compression enabled
