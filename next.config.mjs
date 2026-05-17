@@ -8,13 +8,8 @@ const nextConfig = {
         return `build-${Date.now()}`;
     },
     
-    // Explicit environment variables for standalone build
+    // Browser-exposed values only. Server secrets are read at runtime from process.env.
     env: {
-        TURNSTILE_SECRET_KEY: process.env.TURNSTILE_SECRET_KEY,
-        EMAIL_HOST: process.env.EMAIL_HOST,
-        EMAIL_PORT: process.env.EMAIL_PORT,
-        EMAIL_USER: process.env.EMAIL_USER,
-        EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
         NEXT_PUBLIC_BUILD_ID: process.env.NEXT_PUBLIC_BUILD_ID || `build-${Date.now()}`,
     },
     
@@ -110,7 +105,7 @@ const nextConfig = {
     poweredByHeader: false,
     compress: true,
     
-    output: 'standalone',
+    output: "standalone",
 
     // Explicitly opt into Turbopack config to avoid Next 16 build errors.
     turbopack: {},
